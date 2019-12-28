@@ -8,8 +8,6 @@ Download from <https://github.com/taylodl/midi-sequencer.git>
 
 ## Usage
 
-FIXME: explanation
-
     $ lein run <instrument#:0-127>
 
 ## Options
