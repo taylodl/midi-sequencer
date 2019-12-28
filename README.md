@@ -1,35 +1,27 @@
 # midi-sequencer
 
-FIXME: description
+Project corresponding to [Making Music with Clojure - An Introduction to MIDI](https://taylodl.wordpress.com/2014/01/21/making-music-with-clojure-an-introduction-to-midi/) blog post.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from <https://github.com/taylodl/midi-sequencer.git>
 
 ## Usage
 
 FIXME: explanation
 
-    $ java -jar midi-sequencer-0.1.0-standalone.jar [args]
+    $ lein run <instrument#:0-127>
 
 ## Options
 
-FIXME: listing of options this app accepts.
+Specify the desired instrument number. MIDI allows values 0-127. The instrument selected depends on your MIDI synthesizer. 
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ lein run 50
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014-2019 Don Taylor
 
 Distributed under the Eclipse Public License, the same as Clojure.
