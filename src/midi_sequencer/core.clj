@@ -63,7 +63,7 @@
 (def interval-6th (memoize (fn [pitch scale] (first (rest (rest (rest (rest (rest (drop-while #(not (= pitch %)) scale))))))))))
 (def interval-7th (memoize (fn [pitch scale] (first (rest (rest (rest (rest (rest (rest (drop-while #(not (= pitch %)) scale)))))))))))
 
-(def major-chord (memoize (fn [pitch scale] (vector pitch (interval-3rd pitch scale) (interval-5th pitch scale)))))
+(def triad (memoize (fn [pitch scale] (vector pitch (interval-3rd pitch scale) (interval-5th pitch scale)))))
 
 (defn -main
   "Right now we play the chromatic scale using the instrument provided"
@@ -78,7 +78,7 @@
 	 (let [[pitch  note {:keys [vol_adj tie] :or {vol_adj 0}}] midiNote] 
 	      (synthPlayer 
 	       (+ volume vol_adj) 
-	       (map #(PITCHES %) (major-chord pitch FMaj))
+	       (map #(PITCHES %) (triad pitch FMaj))
 	       (/ (* 60000 (NOTES note)) bpm)))))
 
 
